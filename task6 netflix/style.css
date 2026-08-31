@@ -1,0 +1,238 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: #141414;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+      url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=1200&auto=format&fit=crop') center/cover;
+    }
+   .login-box {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 50px 60px;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 4px;
+    }
+    .login-box h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+    .input-group { margin-bottom: 16px; }
+    .input-group input {
+      width: 100%;
+      padding: 14px;
+      background: #333;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #E50914;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .login-btn:hover { background-color: #f40612; }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 68px;
+      padding: 0 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(20, 20, 20, 0.95);
+      z-index: 100;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .brand-logo {
+      color: #E50914;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    .nav-links li a {
+      color: #e5e5e5;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .nav-links li a:hover, .nav-links li a.active { 
+      color: #ffffff; 
+      font-weight: bold;
+      border-bottom: 2px solid #E50914;
+      padding-bottom: 4px;
+    }
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .user-greeting {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #e5e5e5;
+    }
+    .search-input {
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      outline: none;
+    }
+    .logout-btn {
+      background: #E50914;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .hero-banner {
+      position: relative;
+      height: 60vh;
+      background: linear-gradient(0deg, #141414 0%, rgba(20,20,20,0.2) 50%, rgba(0,0,0,0.7) 100%), 
+      url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 4% 40px 4%;
+      margin-top: 68px;
+    }
+    .hero-content { max-width: 600px; }
+    .hero-title { font-size: 2.8rem; font-weight: bold; margin-bottom: 12px; }
+    .hero-description { font-size: 0.9rem; color: #e5e5e5; margin-bottom: 15px; }
+    .btn-play {
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      background-color: #ffffff;
+      color: #000;
+    }
+    .main-container { padding: 30px 4%; }
+    .section-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; color: #ffffff; border-left: 4px solid #E50914; padding-left: 10px; }
+    .movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .movie-card {
+      background-color: #181818;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+      border: 1px solid #282828;
+    }
+    .movie-card:hover { transform: scale(1.05); }
+    .movie-card img { width: 100%; height: 240px; object-fit: cover; }
+    .movie-info { padding: 12px; }
+    .movie-title {
+      font-size: 0.9rem;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .footer {
+      background-color: #101010;
+      color: #757575;
+      padding: 50px 10% 30px;
+      margin-top: auto;
+      border-top: 1px solid #222;
+      font-size: 0.85rem;
+    }
+
+    .footer-top {
+      margin-bottom: 25px;
+    }
+
+    .footer-top a {
+      color: #757575;
+      text-decoration: none;
+    }
+
+    .footer-top a:hover {
+      text-decoration: underline;
+    }
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      list-style: none;
+      margin-bottom: 30px;
+    }
+    .footer-links li a {
+      color: #757575;
+      text-decoration: none;
+    }
+    .footer-links li a:hover {
+      text-decoration: underline;
+    }
+    .lang-selector {
+      background: #000;
+      color: #757575;
+      border: 1px solid #333;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+      outline: none;
+    }
+    .copyright {
+      font-size: 0.75rem;
+      color: #555;
+    }
+    .match-score { color: #46d369; font-size: 0.75rem; font-weight: bold; margin-top: 4px; }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 200;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content { position: relative; width: 90%; max-width: 800px; background: #181818; }
+    .modal-content iframe { width: 100%; height: 450px; border: none; }
+    .modal-close { position: absolute; top: -35px; right: 0; font-size: 24px; color: #fff; cursor: pointer; }
+    .hidden { display: none !important; 
+    }
